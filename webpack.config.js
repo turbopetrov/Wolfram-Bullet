@@ -64,8 +64,7 @@ module.exports = {
             options: {
               patterns: [
                 './scss/colors.scss',
-                './scss/heading.scss',
-                './scss/paragraph.scss',
+                './scss/text-rules.scss',
             ]
             }
           }

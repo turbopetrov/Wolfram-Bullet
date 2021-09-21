@@ -1,12 +1,15 @@
 <template lang="pug">
 .page
-  router-view
+  app-test-fight
 </template>
 
 <script>
-
+import testFight from './components/test-fight.vue'
 
 export default {
+  components:{
+    'app-test-fight': testFight,
+  },
   data() {
     return {};
   },

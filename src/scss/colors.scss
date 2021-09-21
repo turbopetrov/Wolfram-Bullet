@@ -1,0 +1,27 @@
+$dark-grad: linear-gradient(
+  214.96deg,
+  rgba(19, 19, 19, 0.23) -19.62%,
+  rgba(19, 19, 19, 0.85) 30.26%,
+  rgba(19, 19, 19, 0.82) 62.63%,
+  rgba(19, 19, 19, 0) 129.38%
+);
+
+:root {
+  --blue: #3899f2;
+  --yellow: #eff238;
+  --red: #f23838;
+  --green: #78ff25;
+}
+
+$white: white;
+$violet: violet;
+$red: #f23838;
+$blue: #3899f2;
+$yellow: #eff238;
+$green: #78ff25;
+
+.blur {
+  background: $dark-grad;
+  backdrop-filter: blur(4px);
+}
+
