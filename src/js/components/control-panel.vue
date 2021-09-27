@@ -21,7 +21,9 @@ export default {
     height: 40vh;
     background: $dark-grad;
     border: 10px solid $violet;
-    &__inner-wrapper{      
+    &__inner-wrapper{
+      display: flex;
+      flex-direction: row;
       padding: 30px 50px;
     }
   }

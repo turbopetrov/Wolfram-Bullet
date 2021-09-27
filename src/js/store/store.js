@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import character from './modules/character';
+import guard from './modules/Characters/Guard';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
-    character
+    guard
   },
 });

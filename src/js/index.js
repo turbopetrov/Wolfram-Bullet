@@ -3,6 +3,6 @@ import store from "./store/store.js";
 import App from "./App.vue";
 
 new Vue({
-  store, 
+  store,
   render: (h) => h(App),
 }).$mount("#app");
