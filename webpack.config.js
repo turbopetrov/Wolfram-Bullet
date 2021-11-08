@@ -14,7 +14,7 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './dist/'),
     filename: 'scripts.js',
     publicPath: './',
   },
@@ -76,7 +76,7 @@ module.exports = {
           loader: 'url-loader',
           options: {
             name: '[path][name].[ext]',
-            publicPath: '/',
+            publicPath: './',
             limit: 8000,
           },
         }],
@@ -100,7 +100,7 @@ module.exports = {
     new CopyWebpackPlugin(
       {
         patterns: [
-          { from: './assets', to: 'assets' },
+          { from: './assets', to: './assets' },
         ],
       },
     ),

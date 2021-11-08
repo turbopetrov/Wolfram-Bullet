@@ -1,7 +1,7 @@
 <template lang="pug">
   .avatar
     .avatar__frame
-      img.avatar__img(:src= '"src/assets/img/avatars/" + characterClass + ".png" ')
+      img.avatar__img(:src= '"assets/img/avatars/" + characterClass + ".png" ')
 
 </template>
 
