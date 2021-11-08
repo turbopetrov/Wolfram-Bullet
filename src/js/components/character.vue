@@ -16,7 +16,7 @@
         :statName='stat.name',
         :color='stat.color'
         )
-      
+
 </template>
 
 <script>

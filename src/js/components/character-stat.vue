@@ -1,10 +1,10 @@
 <template lang="pug">
   .character-stat
     .character-stat__name.heading| {{statName}}:
-    .character-stat__status-bar
+    .character-stat__status-bar.paragraph_xs
       .character-stat__status-bar-fill(
       :style="{background: `var(${'--' + color})`, width: `${valueInProcent+'%'}`}"
-    )
+    )| {{valueInProcent + '%'}}
 </template>
 
 <script>
@@ -23,21 +23,20 @@ export default {
   },
   data() {
     return{
-      maxValue: '',
+      currentValue: '',
     }
   },
   computed:{
     ...mapGetters(['guardStats']),
     valueInProcent(){
-      return this.guardStats.find(stat=>stat.name===this.statName)/this.maxValue*100
+      let currentValue = this.guardStats.find(stat=>stat.name === this.statName).currentValue;
+      let startValue = this.guardStats.find(stat=>stat.name===this.statName).startValue;
+      return currentValue/startValue*100
     }
   },
   methods:{
     ...mapMutations(['INCREASE_STAT','DECREASE_STAT'])
   },
-  mounted(){
-    this.maxValue = this.guardStats.find(stat=>stat.name === this.statName)
-  }
 }
 </script>
 
@@ -58,6 +57,7 @@ export default {
       height: 100%;
       border-radius: 5px;
       transition: .5s;
+      text-align: center;
     }
   }
   .btn{

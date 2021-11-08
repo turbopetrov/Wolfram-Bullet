@@ -5,19 +5,22 @@ export default{
         {
           id: 1,
           name: 'health',
-          value: 100,
+          startValue: 100,
+          currentValue: 100,
           color: 'red'
         },
         {
           id: 2,
           name: 'energy',
-          value: 100,
+          startValue: 100,
+          currentValue: 100,
           color: 'yellow'
         },
         {
           id: 3,
           name: 'actionPoints',
-          value: 10,
+          startValue: 10,
+          currentValue: 10,
           color: 'blue'
         }
       ],
@@ -58,10 +61,12 @@ export default{
    
   },
   mutations:{
-    INCREASE_STAT(state, statName, value){
-      return state.guard.inFight[statName]+=value;
+    INCREASE_STAT(state, playload){
+      return state.guard[statName]+=value;
     },
     DECREASE_STAT(state, playload){
+      let stat = state.guard.stats.find(stat=>stat.name===playload.statName);
+      stat.currentValue -= playload.value
       
     }
   }

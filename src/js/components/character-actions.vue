@@ -1,6 +1,6 @@
 <template lang="pug">
   .actions
-    button.actions__attack-button.heading(@click='DECREASE_STAT(kickAssData)')| Kick ass!
+    button.actions__attack-button.heading(@click='action')| Kick ass!
 </template>
 
 <script>
@@ -10,13 +10,16 @@ export default {
     return{
       kickAssData:{
         damage: 36,
-        energyCost: 15,
-        actionPointsCost: 2,
+        energyCost: 16,
+        actionPointsCost: 3,
       }
     }
   },
   methods:{
-    ...mapMutations(['DECREASE_STAT'])
+    ...mapMutations(['DECREASE_STAT']),
+    action(){
+      this.$emit('kickAss', this.kickAssData);
+    }
   }
 
 }

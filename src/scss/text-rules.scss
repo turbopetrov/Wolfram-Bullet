@@ -6,8 +6,24 @@
   font-family: 'MuseoModerno';
   font-style: normal;
 }
+
+%paragraph {
+  margin: 0;
+  padding: 0;
+  color: $white;
+  font-weight: 200;
+  font-family: 'MuseoModerno';
+  font-style: normal;
+}
+
 .heading {
   font-size: 1.25em;
   line-height: 100%;
   @extend %heading
+}
+
+.paragraph_xs {
+  font-size: .5em;
+  line-height: 100%;
+  @extend %paragraph
 }
